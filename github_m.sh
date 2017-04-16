@@ -6,3 +6,4 @@ echo -e "\033[32mCommiting...\033[0m"
 git commit -m "$1"
 echo -e "\033[32mPushing...\033[0m"
 git push
+echo -e "\033[32mDone.\033[0m"
