@@ -1,5 +1,7 @@
 # 界面优化
 ## 去标题栏
+> debian8下有效，升级到9以后，失效
+
 gnome3顶部有一栏标题栏，而最大化的时候，标题栏也占了一行，这样就感觉很不爽了，解决方法如下：
 1. root登录
 3. vim /usr/share/themes/Adwaita/metacity-1/metacity-theme-3.xml
