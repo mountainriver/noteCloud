@@ -3,6 +3,7 @@
 ```
 iptables -P INPUT DROP	#默认禁止所有进入的。
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT	#必须，允许。。。
+iptables -A INPUT -s 127.0.0.1 -j ACCEPT	#第一条会把本地访问本地也禁止掉，加上这条允许本地访问本地。
 ......
 
 iptables-save > /etc/iptables.rules	#保存配置。
