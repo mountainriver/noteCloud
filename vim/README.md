@@ -3,3 +3,10 @@
 方式是通过VIMRC配置和安装插件。
 
 >备注：1.F5一键运行有时VIM会显示空白。 :redraw! 强制重绘可临时解决。
+# INSTALL
+## windows
+1. 安装VIM，或则下载vim64.
+2. git clone vundle,或者下载下来，放到vim/vimfiles/下
+3. 配置vim/_vimrc 
+4. 安装插件
+## linux
