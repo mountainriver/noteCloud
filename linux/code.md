@@ -15,8 +15,8 @@ iconv -f GBK -t UTF-8 file1 -o file2
 3. fileencodings 决定读取文件的编码选择顺序、列表
 4. termencoding 决定输出到屏幕使用那种编码
 
-# 1.相关基础知识介绍
-
+# 相关基础知识介绍
+1. 
 在Vim中，有四个与编码有关的选项，它们是：fileencodings、fileencoding、encoding和termencoding。在实际使用中，任何一个选项出现错误，都会导致出现乱码。因此，每一个Vim用户都应该明确这四个选项的含义。下面，我们详细介绍一下这四个选项的含义和作用。
 
 （1）encoding
