@@ -12,3 +12,9 @@ vim /etc/network/if-pre-up.d/iptables	#当网络启用时生效。
 	#!/bin/sh
 	iptables-restore < /etc/iptables.rules
 ```
+- 需要配置多个连续或不连续的端口
+	1. 连续
+```
+-A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 60001:60006 -j ACCEPT
+```
+	2. 对于非连续段或多段， 用mport或multiport 是不错的选择。
