@@ -9,5 +9,9 @@
 2. git clone vundle,或者下载下来，放到vim/vimfiles/下
 3. 配置vim/_vimrc 
 4. 安装插件
-5. powerline字体？
+5. 有乱码，powerline字体？
 ## linux
+
+# notice
+- 不想启用vimrc，可以使用 `vim -u NORC`
+- 查看vimrc使用顺序，用`vim --version`;`vim; :version`
