@@ -1,3 +1,4 @@
+set encoding=utf-8 fileencodings=ucs-bom,utf-8,cp936
 """"""""""""Vundle""""""""""""
 set nocompatible              " 去除VI一致性,必须
 filetype off                  " 必须
@@ -11,8 +12,6 @@ call vundle#begin()
 " 让vundle管理插件版本,必须
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
 
 Plugin 'suan/vim-instant-markdown'
 Plugin 'vim-airline/vim-airline'
@@ -90,12 +89,19 @@ function RunPython()
 endfunction
 """"""""""air-line""""""""""
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+nnoremap <C-N> :bn<CR>
+nnoremap <C-P> :bp<CR>
 set laststatus=2
 set t_Co=256
 let g:airline_powerline_fonts = 1
+set encoding=utf-8
+set ttimeoutlen=50
 set background=dark
 let g:airline#extensions#branch#enabled = 1
 """"""""""NERDTee""""""""""
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 """""""""""vim-markdown"""""""""""
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_toc_autofit = 1
