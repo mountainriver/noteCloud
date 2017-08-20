@@ -1,9 +1,9 @@
 # 查看
-1. ls -l /dev/
+1. ls -l /dev/  
 crw-rw----  1 root       dialout 188,   0 Jun 30 10:13 ttyUSB0
-2. lsusb
+2. lsusb  
 Bus 006 Device 002: ID 0403:6001 Future Technology Devices International, Ltd FT232 USB-Serial (UART) IC
-3. dmesg | grep tty
+3. dmesg | grep tty  
 [  376.436201] usb 6-1: FTDI USB Serial Device converter now attached to ttyUSB0
 # 使用minicom
 1. sudo minicom -s 配置
