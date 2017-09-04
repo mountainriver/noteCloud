@@ -36,7 +36,19 @@ Swap: 682720 112 682608
 	- cached——缓存，用于已打开的文件
 	- note:
 	     - total=used+free
+<<<<<<< HEAD
 	     - used=buffers+cached (maybe add shared also)?
+=======
+	     - used=buffers+cached (maybe add shared also)
+		 - Linux version 4.9.0-3-amd64 中不同：
+		 ```
+		 root@iThink:~#free
+		               total        used        free      shared  buff/cache   available
+					   Mem:        8071364      852980     6472140      165836      746244     6813336
+					   Swap:       3203068           0     3203068
+		 ```
+			total = used + free + buff/cache
+>>>>>>> 678a6678778f7493ff28ae07b8647f02a0f75fa8
 
 - 第二行描述应用程序的内存使用：
 	- 前个值表示-buffers/cache——应用程序使用的内存大小，used减去缓存值
