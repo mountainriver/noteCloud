@@ -36,7 +36,7 @@ Swap: 682720 112 682608
 	- cached——缓存，用于已打开的文件
 	- note:
 	     - total=used+free
-	     - used=buffers+cached (maybe add shared also)
+	     - used=buffers+cached (maybe add shared also)?
 
 - 第二行描述应用程序的内存使用：
 	- 前个值表示-buffers/cache——应用程序使用的内存大小，used减去缓存值
