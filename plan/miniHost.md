@@ -1,7 +1,9 @@
 # 需要实现的功能
 1. linux系统
 2. 各种下载
-3. sftp
+	- bittorrent - Original BitTorrent client - console tools
+	- Aria2+WebUI	//支持迅雷、百度盘、BT
+3. vsftp
 4. web
 	- nginx
 5. 视频播放
@@ -12,4 +14,4 @@
 # 选用硬件
 1. 准系统
 	- 昂达
-2. 
+	- Intel nuc
