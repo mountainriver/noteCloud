@@ -11,7 +11,7 @@
 4. 安装插件
 5. 有乱码，powerline字体？
 ## linux
-
+git clone vunble
 # notice
 - 不想启用vimrc，可以使用 `vim -u NORC`
 - 查看vimrc使用顺序，用`vim --version`;`vim; :version`
