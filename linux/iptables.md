@@ -17,6 +17,7 @@ ip6tables .....
 -A RH-Firewall-1-INPUT -m state --state NEW -m tcp -p tcp --dport 60001:60006 -j ACCEPT
 ```
 2. 对于非连续段或多段， 用mport或multiport 是不错的选择。
+`iptable -A INPUT -p tcp -m multiport --dport 123,321 -j ACCEPT
 # 保存（重启自动生效）
 1. DEBIAN
 ```
