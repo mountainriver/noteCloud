@@ -11,7 +11,9 @@
 4. 安装插件
 5. 有乱码，powerline字体？
 ## linux
+cd ~/.vim/
 git clone vunble
 # notice
+- airline不显示箭头，需要安装fonts-powerline(需要刷新字体缓存，或重启)
 - 不想启用vimrc，可以使用 `vim -u NORC`
 - 查看vimrc使用顺序，用`vim --version`;`vim; :version`
