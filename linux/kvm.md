@@ -22,6 +22,15 @@ systemctl restart libvirtd.service
 	virsh vncdisplay test_ubuntu 	//查看虚拟机的vnc端口， 然后就可以通过vnc登录来完成虚拟机的安装
 
 # 常用命令
+- 磁盘
+qemu-img info demo.qcow2	//查询磁盘文件信息
+
+virsh define vm0.xml  //导入虚拟机配置
+virsh start vm0  //开启vm0
+virsh list --all  // 显示所有虚拟机状态
+virsh destroy vm0  //销毁虚拟机
+virsh undefine vm1  //删除虚拟机配置
+virsh dumpxml vm0 //显示虚拟机xml配置
 - 网络
 virsh net-list --all
 virsh net-start default
