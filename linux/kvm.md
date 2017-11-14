@@ -31,7 +31,7 @@ virsh shutdown hostname
 - 连接到客户机串口
 virsh console hostname
 - 非root用户
-virsh --connect qemu:	///system list --all
+virsh --connect qemu:///system list --all
 
 # 附件
 ## .xml
