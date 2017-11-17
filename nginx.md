@@ -55,3 +55,28 @@ server {
     }
 }
 ```
+## 支持pathinfo模式
+Nginx服务器默认不支持pathinfo, 在需要pathinfo支持的程序中(如thinkphp),则无法支持”/index.php/Home/Index/index”这种网址.
+这里提供一种比较简洁的写法(只需要改动2行代码)
+1. 典型配置
+```
+location ~ \.php$ {
+    root           html;
+    fastcgi_pass   127.0.0.1:9000;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $DOCUMENT_ROOT$fastcgi_script_name;
+	#include        fastcgi_params;
+}
+}
+```
+2. 修改第1,6行,支持pathinfo
+```
+location ~ \.php(.*)$ {		# 正则匹配.php后的pathinfo部分
+    root html;
+    fastcgi_pass   127.0.0.1:9000;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $DOCUMENT_ROOT$fastcgi_script_name;
+    fastcgi_param PATH_INFO $1;		# 把pathinfo部分赋给PATH_INFO变量
+	#include        fastcgi_params;
+}
+```
