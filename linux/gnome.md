@@ -15,4 +15,15 @@
 	将9改成0。
 	7. 按Alt+F2，输入r，回车就可以看到效果了。
 2. 安装gnome插件
-	maximus-two
+	maximus-ng
+	//maximus-two
+## 其他插件
+- Dash to dock
+- Drop down terminal
+- Applications menu
+- Netspeed
+- Openwather
+- User themes
+## 主题
+- Global Dark Theme
+- Numix
