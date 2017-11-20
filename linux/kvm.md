@@ -17,7 +17,7 @@ systemctl restart libvirtd.service
 	qemu-img create -f qcow2 CentOS1.qcow2 100G
 	2. 配置文件，xml(见最后附件)
 	3. 配置，启动
-    virsh define demo.xml 	//定义,创建虚拟机
+    virsh define demo.xml 	//定义虚拟机,然后会自动在 /etc/libvirt/qemu/ 下创建新的配置文件
 	virsh start test_ubuntu 	//启动虚拟机
 	virsh vncdisplay test_ubuntu 	//查看虚拟机的vnc端口， 然后就可以通过vnc登录来完成虚拟机的安装
 
