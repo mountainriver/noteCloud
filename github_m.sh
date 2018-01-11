@@ -7,8 +7,7 @@ echo -e "\033[32m1.Adding all change...\033[0m"
 git add -A
 echo -e "\033[32m2.Commiting...\033[0m"
 
-if [-n "$1"]
-then
+if [-n "$1"];then
 	git commit -m "$1"
 else
 	t=`date +%Y%m%d%M`
