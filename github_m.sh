@@ -1,5 +1,5 @@
 #/bin/bash
-
+ 
 echo -e "\033[32mGithub working...\033[0m"
 echo -e "\033[32m0.pulling...\033[0m"
 git pull
