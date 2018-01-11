@@ -10,7 +10,7 @@ echo -e "\033[32m2.Commiting...\033[0m"
 if [-n "$1"];then
 	git commit -m "$1"
 else
-	t=`date +%Y%m%d%M`
+	t=`date +%Y%m%d%H%M`
 	git commit -m "$t"
 fi
 
