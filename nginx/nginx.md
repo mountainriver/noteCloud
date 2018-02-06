@@ -1,3 +1,12 @@
+## 日常运维
+- 配置文件
+>
+	/etc/nginx/nginx.conf
+	/etc/nginx/sites-available/
+	/etc/nginx/sites-enabled/
+- 日志
+>
+	/var/log/nginx/
 ## 自行颁发不受浏览器信任的SSL证书
 1. 生成一个RSA密钥  
 `$ openssl genrsa -des3 -out 33iq.key 1024`

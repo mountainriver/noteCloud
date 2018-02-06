@@ -1,5 +1,4 @@
-﻿
-# 登陆超时配置
+﻿# 登陆超时配置
 1. 系统参数
 profile  TMOUT
 
@@ -12,32 +11,20 @@ profile  TMOUT
 
 > 1 查看当前配置
 
+```
 grep"ClientAlive" sshd_config
-
 #ClientAliveInterval0
-
 #ClientAliveCountMax3
-
+```
 2 备份原文件
-
 cp sshd_configsshd_config.bak
-
 3 修改配置文件
 
 sed-i "s/#ClientAliveInterval 0/ClientAliveInterval 60/g" sshd_config
-
 sed -i "s/#ClientAliveCountMax3/ClientAliveCountMax 3/g" sshd_config
-
 4 验证修改结果
-
 grep"ClientAlive" sshd_config
-
 diff sshd_config sshd_config.bak
-
-
-
 5 重启服务
-
 service sshdrestart
-
 现在无论空闲多久，SSH客户端都不会自动断开了。
