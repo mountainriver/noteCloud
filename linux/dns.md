@@ -1,11 +1,4 @@
 ## 重启失效解决
-1. 由于DNS是由networkmanager生成的，首先要设置一下networkmanager。   
-	在/etc/NetworkManager/NetworkManager.conf中确保
-```
-managed=true	//如果是false就要改成true
-```
-2. 配置/etc/network/interface 增加
-```
-dns-nameservers 8.8.8.8
-```
-重启network-manager或则系统就都能自动加载了。
+linxu中网络管理软件networking和NetworkManager似乎冲突。
+/etc/resolv.conf文件被建立未一个链接指向/var/run/NetworkManager/resolv.conf,但没有这个文件，添加了后重启一回消失，此文件应该是在内存中。
+方法是删除此链接文件，重新创建resolv.conf。
