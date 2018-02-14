@@ -20,3 +20,4 @@ fi
 > while read ignore args 执行后 ignore="any" args=其他
 > /sbin/route add -$args 添加路由的命令""""]
 ## debian
+在/etc/interfaces中配置？
