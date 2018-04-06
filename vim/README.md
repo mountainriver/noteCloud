@@ -1,4 +1,4 @@
-# vim
+# VIM
 此项目的目的是配置一个基于VIM的PYTHON开发环境。
 方式是通过VIMRC配置和安装插件。
 
@@ -12,8 +12,11 @@
 5. 有乱码，powerline字体？
 ## linux
 cd ~/.vim/
-git clone vunble
-# notice
+git clone vundle
+## macOS
+- 安装vundle,再通过它安装其他插件。
+- 使用自动预览markdown插件，需要先安装Node.js(在Node.js官网下载安装)，再执行`$ sudo npm -g install instant-markdown-d`
+# NOTICE
 - airline不显示箭头，需要安装fonts-powerline(需要刷新字体缓存，或重启)
 - 不想启用vimrc，可以使用 `vim -u NORC`
 - 查看vimrc使用顺序，用`vim --version`;`vim; :version`
